@@ -1,0 +1,11 @@
+# Source PDFs (too large for git)
+*.pdf
+*.epub
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+/tmp/
