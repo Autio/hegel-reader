@@ -9,3 +9,6 @@ __pycache__/
 # Temporary files
 *.tmp
 /tmp/
+
+# Bluesky credentials
+.bsky_creds.json

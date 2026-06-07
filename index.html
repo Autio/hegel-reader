@@ -5,84 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Hegel Reader: The Science of Logic — Running Commentary</title>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>:root{--bg:#faf8f5;--surface:#fff;--text:#1a1a1a;--text-muted:#6b6b6b;--text-light:#8a8a8a;--accent:#8b4513;--accent-light:#d4a574;--accent-bg:#fdf6ee;--border:#e8e2d9;--border-light:#f0ebe3;--tweet-bg:#f0f7ff;--tweet-border:#c8ddf8;--map-bg:#fafaf9;--map-border:#e2ddd4;--search-bg:#fff;--search-border:#ccc;--highlight:#ffeb3b;--nav-width:260px;--max-width:720px;--radius:6px;--radius-lg:10px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
-.page{display:flex;min-height:100vh}
-
-/* Search */
-.search-wrap{position:relative;margin-bottom:1.25rem}
-.search-wrap input{width:100%;padding:.55rem .75rem .55rem 2.2rem;border:1px solid var(--search-border);border-radius:var(--radius);font-size:.82rem;font-family:Inter,system-ui,sans-serif;background:var(--search-bg);color:var(--text);outline:none;transition:border-color .15s}
-.search-wrap input:focus{border-color:var(--accent-light);box-shadow:0 0 0 2px rgba(139,69,19,.1)}
-.search-wrap .search-icon{position:absolute;left:.65rem;top:50%;transform:translateY(-50%);color:var(--text-light);font-size:.85rem;pointer-events:none}
-.no-results{display:none;text-align:center;padding:3rem 1rem;color:var(--text-muted);font-style:italic}
-mark.search-highlight{background:var(--highlight);padding:.1em .2em;border-radius:2px;color:#000}
-.day-entry.hidden-by-search{display:none!important}
-
-/* Sidebar */
-.sidebar{position:fixed;top:0;left:0;width:var(--nav-width);height:100vh;background:var(--surface);border-right:1px solid var(--border);padding:2rem 1.5rem;overflow-y:auto;z-index:10}
-.sidebar-header{margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:2px solid var(--accent-light)}
-.sidebar-header h1{font-family:"Crimson Text",Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--accent);line-height:1.3;margin-bottom:.3rem}
-.sidebar-header .subtitle{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
-.sidebar-nav h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:.75rem;font-weight:600}
-.sidebar-nav a{display:block;padding:.5rem .75rem;margin-bottom:.25rem;border-radius:var(--radius);color:var(--text);text-decoration:none;font-size:.85rem;transition:all .15s ease;border-left:3px solid transparent}
-.sidebar-nav a:hover{background:var(--accent-bg);color:var(--accent);border-left-color:var(--accent-light)}
-.sidebar-nav .day-meta{font-size:.7rem;color:var(--text-light);display:block;margin-top:.15rem}
-.sidebar-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border-light);font-size:.7rem;color:var(--text-light)}
-
-/* Main */
-.main{margin-left:var(--nav-width);flex:1;padding:3rem 2rem 6rem;max-width:calc(var(--max-width) + var(--nav-width) + 4rem)}
-.page-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-.page-header h1{font-family:"Crimson Text",Georgia,serif;font-size:2.8rem;font-weight:600;color:var(--accent);line-height:1.2;margin-bottom:.5rem}
-.page-header .subtitle{font-size:1.05rem;color:var(--text-muted);font-style:italic;margin-bottom:.5rem}
-.page-header .meta{font-size:.8rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.06em}
-
-/* Day entries */
-.day-entry{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border-light)}
-.day-entry:last-child{border-bottom:none}
-.day-header{margin-bottom:2rem}
-.day-number{font-family:"Crimson Text",Georgia,serif;font-size:2rem;font-weight:600;color:var(--accent);margin-bottom:.25rem}
-.day-title{font-size:1.2rem;font-weight:500;color:var(--text);margin-bottom:.25rem}
-.day-meta-line{font-size:.8rem;color:var(--text-muted);font-style:italic}
-
-/* Sections */
-.section-block{margin-bottom:2rem}
-.section-block h3{font-family:"Crimson Text",Georgia,serif;font-size:1.3rem;font-weight:600;color:var(--accent);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border-light)}
-.section-block h4{font-size:.95rem;font-weight:600;color:var(--text);margin:1rem 0 .5rem}
-.section-block p{margin-bottom:.85rem}
-.section-block ul,.section-block ol{margin:.5rem 0 1rem 1.5rem}
-.section-block li{margin-bottom:.35rem}
-.section-block strong{color:var(--accent);font-weight:600}
-.section-block em{font-style:italic;color:var(--text-muted)}
-.section-block code{font-family:"JetBrains Mono",monospace;font-size:.85em;background:var(--map-bg);padding:.15em .4em;border-radius:3px;color:var(--accent)}
-.section-block blockquote{margin:1rem 0;padding:.75rem 1.25rem;border-left:3px solid var(--accent-light);background:var(--accent-bg);border-radius:0 var(--radius) var(--radius) 0;font-style:italic;color:var(--text-muted)}
-
-/* Collapsible sections */
-.collapsible-section{margin:1rem 0;border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
-.collapsible-section summary{display:flex;align-items:center;gap:.5rem;padding:.7rem 1rem;cursor:pointer;font-size:.85rem;font-weight:500;color:var(--text-muted);user-select:none;list-style:none;transition:background .15s}
-.collapsible-section summary::-webkit-details-marker{display:none}
-.collapsible-section summary::marker{display:none;content:none}
-.collapsible-section summary:hover{background:var(--accent-bg)}
-.collapse-icon{display:inline-block;width:16px;height:16px;position:relative;flex-shrink:0}
-.collapse-icon::before,.collapse-icon::after{content:"";position:absolute;background:var(--text-muted);transition:transform .2s}
-.collapse-icon::before{top:7px;left:2px;width:12px;height:2px}
-.collapse-icon::after{top:2px;left:7px;width:2px;height:12px}
-.collapsible-section[open] .collapse-icon::after{transform:rotate(90deg)}
-.collapsible-body{padding:0 1rem 1rem}
-
-/* System map */
-.system-map{background:var(--map-bg);border:1px solid var(--map-border);border-radius:var(--radius-lg);padding:1.5rem;margin:1rem 0;overflow-x:auto}
-.system-map pre{font-family:"JetBrains Mono",monospace;font-size:.82rem;line-height:1.5;color:var(--text);white-space:pre;margin:0}
-
-/* Tweets */
-.tweet-card{background:var(--tweet-bg);border:1px solid var(--tweet-border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin:1rem 0}
-.tweet-card .tweet-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#5a8ec4;font-weight:600;margin-bottom:.5rem}
-.tweet-card .tweet-text{font-size:1rem;line-height:1.5;color:var(--text)}
-.tweet-card .tweet-char-count{font-size:.7rem;color:var(--text-light);text-align:right;margin-top:.5rem}
-.retro-box{background:#f7faf5;border-left:3px solid #6b9b4a;padding:.75rem 1rem;margin:.75rem 0;border-radius:0 var(--radius) var(--radius) 0;font-size:.95rem}
-
-@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--border);padding:1.25rem}.main{margin-left:0;padding:1.5rem;max-width:100%}.page-header h1{font-size:2rem}}
-@media print{.sidebar{display:none}.main{margin-left:0;max-width:100%}body{background:#fff;font-size:12pt}}</style>
+<style>:root{--bg:#faf8f5;--surface:#fff;--text:#1a1a1a;--text-muted:#6b6b6b;--text-light:#8a8a8a;--accent:#8b4513;--accent-light:#d4a574;--accent-bg:#fdf6ee;--border:#e8e2d9;--border-light:#f0ebe3;--tweet-bg:#f0f7ff;--tweet-border:#c8ddf8;--map-bg:#fafaf9;--map-border:#e2ddd4;--search-bg:#fff;--search-border:#ccc;--highlight:#ffeb3b;--nav-width:260px;--max-width:720px;--radius:6px;--radius-lg:10px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}.page{display:flex;min-height:100vh}.search-wrap{position:relative;margin-bottom:1.25rem}.search-wrap input{width:100%;padding:.55rem .75rem .55rem 2.2rem;border:1px solid var(--search-border);border-radius:var(--radius);font-size:.82rem;font-family:Inter,system-ui,sans-serif;background:var(--search-bg);color:var(--text);outline:none;transition:border-color .15s}.search-wrap input:focus{border-color:var(--accent-light);box-shadow:0 0 0 2px rgba(139,69,19,.1)}.search-wrap .search-icon{position:absolute;left:.65rem;top:50%;transform:translateY(-50%);color:var(--text-light);font-size:.85rem;pointer-events:none}.no-results{display:none;text-align:center;padding:3rem 1rem;color:var(--text-muted);font-style:italic}mark.search-highlight{background:var(--highlight);padding:.1em .2em;border-radius:2px;color:#000}.day-entry.hidden-by-search{display:none!important}.sidebar{position:fixed;top:0;left:0;width:var(--nav-width);height:100vh;background:var(--surface);border-right:1px solid var(--border);padding:2rem 1.5rem;overflow-y:auto;z-index:10}.sidebar-header{margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:2px solid var(--accent-light)}.sidebar-header h1{font-family:"Crimson Text",Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--accent);line-height:1.3;margin-bottom:.3rem}.sidebar-header .subtitle{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;font-weight:500}.sidebar-nav h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:.75rem;font-weight:600}.sidebar-nav a{display:block;padding:.5rem .75rem;margin-bottom:.25rem;border-radius:var(--radius);color:var(--text);text-decoration:none;font-size:.85rem;transition:all .15s ease;border-left:3px solid transparent}.sidebar-nav a:hover{background:var(--accent-bg);color:var(--accent);border-left-color:var(--accent-light)}.sidebar-nav .day-meta{font-size:.7rem;color:var(--text-light);display:block;margin-top:.15rem}.sidebar-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border-light);font-size:.7rem;color:var(--text-light)}.main{margin-left:var(--nav-width);flex:1;padding:3rem 2rem 6rem;max-width:calc(var(--max-width) + var(--nav-width) + 4rem)}.page-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}.page-header h1{font-family:"Crimson Text",Georgia,serif;font-size:2.8rem;font-weight:600;color:var(--accent);line-height:1.2;margin-bottom:.5rem}.page-header .subtitle{font-size:1.05rem;color:var(--text-muted);font-style:italic;margin-bottom:.5rem}.page-header .meta{font-size:.8rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.06em}.day-entry{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border-light)}.day-entry:last-child{border-bottom:none}.day-header{margin-bottom:2rem}.day-number{font-family:"Crimson Text",Georgia,serif;font-size:2rem;font-weight:600;color:var(--accent);margin-bottom:.25rem}.day-title{font-size:1.2rem;font-weight:500;color:var(--text);margin-bottom:.25rem}.day-meta-line{font-size:.8rem;color:var(--text-muted);font-style:italic}.section-block{margin-bottom:2rem}.section-block h3{font-family:"Crimson Text",Georgia,serif;font-size:1.3rem;font-weight:600;color:var(--accent);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border-light)}.section-block h4{font-size:.95rem;font-weight:600;color:var(--text);margin:1rem 0 .5rem}.section-block p{margin-bottom:.85rem}.section-block ul,.section-block ol{margin:.5rem 0 1rem 1.5rem}.section-block li{margin-bottom:.35rem}.section-block strong{color:var(--accent);font-weight:600}.section-block em{font-style:italic;color:var(--text-muted)}.section-block code{font-family:"JetBrains Mono",monospace;font-size:.85em;background:var(--map-bg);padding:.15em .4em;border-radius:3px;color:var(--accent)}.section-block blockquote{margin:1rem 0;padding:.75rem 1.25rem;border-left:3px solid var(--accent-light);background:var(--accent-bg);border-radius:0 var(--radius) var(--radius) 0;font-style:italic;color:var(--text-muted)}.collapsible-section{margin:1rem 0;border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;background:var(--surface)}.collapsible-section summary{display:flex;align-items:center;gap:.5rem;padding:.7rem 1rem;cursor:pointer;font-size:.85rem;font-weight:500;color:var(--text-muted);user-select:none;list-style:none;transition:background .15s}.collapsible-section summary::-webkit-details-marker{display:none}.collapsible-section summary::marker{display:none;content:none}.collapsible-section summary:hover{background:var(--accent-bg)}.collapse-icon{display:inline-block;width:16px;height:16px;position:relative;flex-shrink:0}.collapse-icon::before,.collapse-icon::after{content:"";position:absolute;background:var(--text-muted);transition:transform .2s}.collapse-icon::before{top:7px;left:2px;width:12px;height:2px}.collapse-icon::after{top:2px;left:7px;width:2px;height:12px}.collapsible-section[open] .collapse-icon::after{transform:rotate(90deg)}.collapsible-body{padding:0 1rem 1rem}.system-map{background:var(--map-bg);border:1px solid var(--map-border);border-radius:var(--radius-lg);padding:1.5rem;margin:1rem 0;overflow-x:auto}.system-map pre{font-family:"JetBrains Mono",monospace;font-size:.82rem;line-height:1.5;color:var(--text);white-space:pre;margin:0}.tweet-card{background:var(--tweet-bg);border:1px solid var(--tweet-border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin:1rem 0}.tweet-card .tweet-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#5a8ec4;font-weight:600;margin-bottom:.5rem}.tweet-card .tweet-text{font-size:1rem;line-height:1.5;color:var(--text)}.tweet-card .tweet-char-count{font-size:.7rem;color:var(--text-light);text-align:right;margin-top:.5rem}.retro-box{background:#f7faf5;border-left:3px solid #6b9b4a;padding:.75rem 1rem;margin:.75rem 0;border-radius:0 var(--radius) var(--radius) 0;font-size:.95rem}@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--border);padding:1.25rem}.main{margin-left:0;padding:1.5rem;max-width:100%}.page-header h1{font-size:2rem}}@media print{.sidebar{display:none}.main{margin-left:0;max-width:100%}body{background:#fff;font-size:12pt}}</style>
 </head>
 <body>
 <div class="page">
@@ -91,11 +14,12 @@ mark.search-highlight{background:var(--highlight);padding:.1em .2em;border-radiu
 <div class="search-wrap"><span class="search-icon">&#128269;</span><input type="text" id="search" placeholder="Search... (Ctrl+K)" autocomplete="off"></div>
 <div class="sidebar-nav"><h3>Daily Readings</h3>
 <a href="#day-1">Day 1<span class="day-meta">Chapter 1: Being — a. Being, b. Nothing, c. Becoming (+</span></a>
+<a href="#day-2">Day 2<span class="day-meta">Chapter 2: Existence (Dasein) — a. Existence as Such / </span></a>
 </div>
-<div class="sidebar-footer">Started June 06, 2026<br>Last updated: June 06, 2026 at 13:57<br>1 reading completed</div>
+<div class="sidebar-footer">Started June 06, 2026<br>Last updated: June 08, 2026 at 00:10<br>2 readings completed</div>
 </nav>
 <main class="main">
-<header class="page-header"><h1>Hegel Reader: The Science of Logic — Running Commentary</h1><div class="subtitle">A day-by-day, spiraling-up commentary on Hegel's Science of Logic.</div><div class="meta">Started June 06, 2026 &middot; 1 daily reading &middot; Updated June 06, 2026 at 13:57</div></header>
+<header class="page-header"><h1>Hegel Reader: The Science of Logic — Running Commentary</h1><div class="subtitle">A day-by-day, spiraling-up commentary on Hegel's Science of Logic.</div><div class="meta">Started June 06, 2026 &middot; 2 daily readings &middot; Updated June 08, 2026 at 00:10</div></header>
 <div class="no-results" id="no-results">No entries match your search.</div>
 <article class="day-entry" id="day-1" data-search-content="1 Chapter 1: Being — a. Being, b. Nothing, c. Becoming (+ Remarks 1–4) Pages 132–c.150 | Book One: The Doctrine of Being, Section I: Determinateness (Quality)"><header class="day-header"><div class="day-number">Day 1</div><div class="day-title">Chapter 1: Being — a. Being, b. Nothing, c. Becoming (+ Remarks 1–4)</div><div class="day-meta-line">Pages 132–c.150 | Book One: The Doctrine of Being, Section I: Determinateness (Quality)</div></header><div class="section-block" data-searchable><h3>The Reading</h3><p>Hegel opens the <em>Science of Logic</em> with the most radical beginning imaginable: pure being, without any determination whatsoever. This is not the being of anything in particular — it is being stripped of every predicate, every quality, every relation. It is "pure indeterminateness and emptiness." And Hegel immediately draws the consequence: such being is indistinguishable from <em>nothing</em>. </p>
 <p>The opening is a performative demonstration of dialectical method. Pure being, precisely because it is indeterminate, "is in fact nothing, and neither more nor less than nothing." Pure nothing, examined on its own terms, turns out to have the same character — "simple equality with itself, complete emptiness." They are the same determination, or rather the same absence of determination. Yet they are not simply identical; the truth is that each <em>vanishes into</em> the other. This movement of vanishing is <strong>becoming</strong>.
@@ -200,102 +124,156 @@ Hegel turns to the dialectic that would prove the eternity of matter by denying 
 
 <em>Next: Chapter 2 — Existence (Determinate Being as Such, Quality, Something)</em>
 
----</p></div></div></details></article>
+---</p>
+<p>---</p></div></div></details></article><article class="day-entry" id="day-2" data-search-content="2 Chapter 2: Existence (Dasein) — a. Existence as Such / a. Existence in General §§21.97–21.98 | Book One, Section I: Determinateness (Quality)"><header class="day-header"><div class="day-number">Day 2</div><div class="day-title">Chapter 2: Existence (Dasein) — a. Existence as Such / a. Existence in General</div><div class="day-meta-line">§§21.97–21.98 | Book One, Section I: Determinateness (Quality)</div></header><div class="section-block" data-searchable><h3>The Reading</h3><p>With becoming, the dialectic produced its first <em>determinate</em> result: the unity of being and nothing was not a static identity but a restless movement, a vanishing-into-each-other. Today Hegel takes the next step: becoming itself is sublated. The movement settles. What remains is <strong>existence</strong> — <em>Dasein</em>, literally "being-there."
+
+<strong>The sublation of becoming (§21.97–21.98).</strong> Existence proceeds from becoming. It is "the simple oneness of being and nothing." But because it is <em>simple</em> — because the restless oscillation has come to rest — existence assumes "the form of an immediate." Its mediation, the becoming, "lies behind it; it has sublated itself." Existence therefore <em>appears</em> as a first, a fresh starting point — even though we know it is a result.</p>
+<p>This is a crucial structural feature of Hegel's dialectic: every genuine result presents itself as a new immediacy. The labor that produced it is preserved but hidden; the result stands forth as if it were self-standing. Hegel will exploit this throughout the <em>Logic</em>: each new category is both a mediated result <em>and</em> an immediate starting point. The spiral turns.
+
+<strong>Dasein as being-with-non-being.</strong> What distinguishes existence from the pure being of Chapter 1? Pure being was indeterminate; existence is <em>determinate</em> being. It is "being with a non-being, so that this non-being is taken up into simple unity with being." The "non-being" here is determinateness itself. Hegel is drawing on Spinoza's principle <em>omnis determinatio est negatio</em> — every determination is a negation. To be <em>this</em> is not to be <em>that</em>. Determinateness <em>is</em> the presence of negation within being.</p>
+<p>But here negation is not an external limit; it is <em>taken up into</em> being. The non-being is not opposed to being but incorporated into it as its own determinateness. This is what makes existence <em>concrete</em>: it contains difference within itself. Pure being was abstract precisely because it excluded all difference. Dasein is the first concrete category because it <em>includes</em> its own negation as a constitutive moment.</p>
+<p>Hegel notes the etymology: <em>Dasein</em> = <em>Sein</em> (being) + <em>da</em> (there, in a certain place). But he immediately warns us off spatial metaphors — the "there" is logical, not spatial. The point is: existence is being that has <em>arrived</em> somewhere, being that has taken on determinateness.
+
+<strong>The tripartite structure previewed (§21.97).</strong> The brief paragraph 21.97 lays out the chapter's architecture. In existence as such (a), we first distinguish its determinateness as <em>quality</em> (b). Quality is to be taken in both its determinations: as <em>reality</em> and as <em>negation</em>. But existence, in these determinacies, is also "reflected into itself" — and as so reflected, it is posited as <em>something</em> (c), an existent.</p>
+<p>The movement is: existence → quality (reality/negation) → something. This maps onto the classic dialectical triad: immediate unity → differentiation → return-to-self.
+
+<strong>The critical methodological distinction: "for us" vs. "posited" (§21.98).</strong> The richest part of today's reading is Hegel's reflection on method. The whole — the unity of being and nothing — is "in the form, or determinateness, of being." We can see this. But Hegel insists: "It is such, however, <em>for us, in our reflection</em>; not yet as posited in it." The distinction between what is <em>for us</em> (the philosophical observer tracking the dialectic) and what is <em>posited in the concept itself</em> (what the category has actually become through its own immanent development) is fundamental.</p>
+<p>Why does this matter? Because Hegel's method demands that every determination emerge immanently from the previous one. If he simply <em>told</em> us that existence is the unity of being and nothing in the form of being, that would be an external assertion — a claim made by the commentator, not a necessity demonstrated by the concept itself. The <em>positing</em> of this determination must happen <em>within</em> the logical development, not in the margins.</p>
+<p>Hegel is unusually candid here about the standpoint of the exposition. He acknowledges that "to remark on a determinateness of this last kind can only be for the clarification or anticipation of the whole that will transpire in the course of the development itself." External reflections are legitimate as pedagogical aids, but they carry "the disadvantage of being seen as unjustified assertions." They must be "distinguished from what constitutes a moment in the advance of the fact itself."</p>
+<p>This passage is a key to reading the entire <em>Logic</em>. Hegel is constantly navigating between (a) the immanent development of the categories, where each determination arises necessarily from the previous one, and (b) the external standpoint of the exposition, where he occasionally steps back to orient the reader. The reader's task is to distinguish these two registers.
+
+<strong>The richness of determinate being.</strong> Hegel closes by contrasting existence with the being of the first chapter. Being was indeterminate — "there are no determinations that therefore transpire in it." But existence is determinate being, "something concrete; consequently, several determinations, several distinct relations of its moments, immediately emerge in it." The simplicity of Dasein is not the emptiness of pure being. It is a <em>concrete</em> simplicity — a simplicity that contains difference, a unity that is internally articulated.</p>
+<p>This sets up the next day's reading on quality, reality, and negation.</p>
+<p>---</p></div><div class="section-block" data-searchable><h3>System Map</h3><p><strong>New determinations introduced:</strong>
+<ul>
+<li><strong>Existence / Dasein</strong>: Determinate being; being that contains non-being (determinateness) within itself as a constitutive moment. The first concrete category — it is the stable result of becoming's sublation.</li>
+<li><strong>Determinateness as such</strong>: Non-being taken up into being. The presence of negation within being that makes something <em>this</em> rather than <em>that</em>. The logical form of <em>omnis determinatio est negatio</em>.</li>
+<li><strong>"For us" vs. "posited"</strong>: The critical methodological distinction between what is visible to the philosophical observer tracking the dialectic and what has been demonstrated immanently within the concept's own development. External reflection clarifies; posited content proves.</li>
+</ul>
+
+<strong>Relations foregrounded:</strong>
+<ul>
+<li>Becoming → Existence: The restless movement of becoming <em>settles</em> into the simple unity of being and nothing. Mediation is sublated into immediacy. The result presents itself as a new beginning.</li>
+<li>Existence → Quality: Determinateness, which in existence is still immediate and simple, will differentiate itself into the two moments of reality and negation (previewed for tomorrow).</li>
+</ul>
+
+---</p></div><div class="section-block" data-searchable><h3>Coherence Evaluation</h3><p>This is a short but pivotal section. It accomplishes the transition from the logic of becoming to the logic of determinateness. Let me evaluate how it coheres with Day 1.
+
+<strong>How it follows from becoming:</strong>
+The transition is logically tight. Becoming was defined as the unrest of being and nothing vanishing into each other. But this unrest, taken as a <em>whole</em>, is itself something — it is a determinate process. The sublation of becoming is not an external operation; it is becoming's own result. When the movement is taken as a totality, it stabilizes into a unity: being-with-non-being. That is Dasein. The necessity is: if becoming is the truth of being and nothing, then becoming's own truth is the stable unity that results from its movement. Becoming cannot remain mere oscillation — oscillation <em>as such</em> is already a determinacy.</p>
+<h4>Points of Constructive Pressure</h4><ol>
+<li><strong>The status of sublation at this stage</strong>: Hegel says becoming "has sublated itself." But the concept of sublation (Aufhebung) has not yet been <em>posited</em> in the logical development — it is still "for us." The Logic is using a concept (sublation) that will only receive its full logical treatment much later, in the Doctrine of Essence. This is not necessarily a problem — the Logic is self-referentially structured, and later categories retrospectively ground earlier ones. But it means the transition from becoming to existence relies on a methodological operation that is, at this stage, external to the content. Whether this circularity is virtuous or vicious remains to be seen.</li>
+</ol>
+
+<ol>
+<li><strong>The "for us" / "posited" distinction</strong>: Hegel's candor about this distinction is admirable, but it raises a deep question: what is the epistemic status of the "for us"? If the philosophical observer can see determinations that are not yet posited in the concept, then the observer occupies a standpoint that exceeds the immanent development. Where does this standpoint come from? Hegel's answer would be that the <em>Phenomenology of Spirit</em> has already earned this standpoint — the "we" who track the Logic are consciousness that has been purified into pure knowing. But within the Logic itself, the "for us" functions as an unthematized presupposition. This is arguably the most fundamental tension in Hegel's entire project.</li>
+</ol>
+
+<ol>
+<li><strong>Determinateness as negation</strong>: Hegel invokes — without naming — Spinoza's principle that all determination is negation. But this principle itself requires justification. Why <em>must</em> determinateness take the form of negation? Could there be a form of determinateness that is purely positive, a differentiation that is not also a limitation? Hegel will need to show, in the development of quality, <em>why</em> reality and negation are necessarily the two moments of determinateness. Today's reading merely previews this.</li>
+</ol>
+
+<ol>
+<li><strong>The etymology argument</strong>: Hegel's appeal to the German <em>Dasein</em> (being-there) is rhetorically effective but logically thin. It shows that German happens to encode the insight Hegel needs, not that the logical structure is necessary. This is a persistent feature of Hegel's method — he often leverages the resources of the German language as if they were logical demonstrations. The philosophical question is whether this is a genuine insight into the way language embodies logical structure, or a contingent feature of one natural language being elevated to necessity.</li>
+</ol><div class="retro-box"><h4>Retrospective Illumination</h4><ul>
+<li>The transition from becoming to existence clarifies <em>why</em> pure being had to pass over into nothing: because being, to be anything at all, must be determinate. The entire drama of Chapter 1 was driven by the implicit demand for determinateness. Now we see what indeterminateness was lacking.</li>
+<li>The "vanishing" of being and nothing into each other now appears as the <em>pre-history</em> of determinateness — the restless movement that must stabilize for anything to actually <em>be</em>. Becoming was not a detour but the necessary genesis of determinateness.</li>
+<li>Hegel's Remark 4 on the infinitesimal calculus (magnitudes "in their vanishing") takes on new significance: the infinitesimal is becoming; the definite integral is Dasein.</li>
+</ul>
+
+<strong>Verdict</strong>: The transition is sound and illuminating. The main structural concern — the role of the "for us" — is not a flaw specific to this transition but a standing question about the entire Logic that will need continuous monitoring.</p>
+<p>---</p></div></div><details class="collapsible-section" open><summary><span class="collapse-icon"></span>Tweets &amp; Extras</summary><div class="collapsible-body"><div class="tweet-card" data-searchable><div class="tweet-label">Tweet — Wisdom Condensation</div><div class="tweet-text">Becoming's restless oscillation between being and nothing finally settles. The result: Dasein — determinate being, being-with-a-built-in-negation. Every determination is a negation; to be *this* is not to be *that*. The first concrete category: simplicity that contains difference.</div><div class="tweet-char-count">281 / 280</div></div><div class="tweet-card" data-searchable><div class="tweet-label">Tweet — Current Events Connection</div><div class="tweet-text">Hegel's Dasein is being that has "arrived somewhere." In 2026, AI finally has its Dasein — no longer pure potential (being) or imminent collapse (nothing), but determinate existence: specific models, real use cases, actual limits. The hype cycle was becoming; deployment is Dasein. We're learning what AI actually *is* by learning what it *isn't*. ---</div><div class="tweet-char-count">351 / 280</div></div></div></details><details class="collapsible-section"><summary><span class="collapse-icon"></span>Modern Rethinkings</summary><div class="collapsible-body"><div class="section-block" data-searchable><h3>Modern Rethinkings</h3><ol>
+<li><strong>Dasein as type theory</strong>: In type theory, a type is defined by its introduction and elimination rules — what counts as an instance and what you can do with it. Hegel's Dasein is the logical ancestor of this idea: to exist as <em>something</em> is to be determinately <em>this</em> and not <em>that</em>. A type system is a formalization of Dasein — it makes explicit the web of negations that constitute any determination. The empty type (⊥) is pure nothing; the unit type (⊤) is pure being; Dasein is any inhabited non-trivial type.</li>
+</ol>
+
+<ol>
+<li><strong>Dasein as the collapse of the wave function</strong>: In quantum mechanics, a superposition is like becoming — the system is neither definitely in state A nor state B but "oscillating" between possibilities. Measurement collapses the wave function into a determinate state — Dasein. Hegel's transition from becoming to existence maps onto the measurement problem: how does the indeterminate (quantum superposition) become the determinate (classical outcome)? Hegel's answer — that the unrest <em>sublates itself</em> — suggests measurement is not an external intervention but an immanent resolution of indeterminacy.</li>
+</ol>
+
+<ol>
+<li><strong>Dasein as database record</strong>: A row in a database has Dasein. It exists as <em>this</em> record, with <em>these</em> values, distinguished from all other rows by its primary key. The primary key is the logical form of Dasein: it is the "there" (da) of the being (Sein). A NULL value is the return of nothing within Dasein — a determinate indication of indeterminateness. The schema is quality; the instance is something.</li>
+</ol>
+
+---</p></div></div></details><details class="collapsible-section"><summary><span class="collapse-icon"></span>Research Project Ideas</summary><div class="collapsible-body"><div class="section-block" data-searchable><h3>Research Project Ideas</h3><ol>
+<li><strong>"The 'For Us' in Hegel's Logic: A Systematic Analysis"</strong>: A comprehensive study of every occurrence of the "for us" / "posited" distinction across the <em>Science of Logic</em>. When does Hegel invoke the standpoint of the observer? When does he claim a determination has been posited immanently? Does the pattern reveal a systematic dependency on external reflection that undermines the claim to presuppositionlessness?</li>
+</ol>
+
+<ol>
+<li><strong>"Dasein and the Foundations of Type Theory: Hegel ante Portas"</strong>: A formal reconstruction of Hegel's transition from becoming to Dasein using dependent type theory. Can the logic of Dasein — being-with-non-being, determinateness as negation — be expressed as a type-theoretic construction? This would bridge continental philosophy and theoretical computer science.</li>
+</ol>
+
+<ol>
+<li><strong>"The Sublation of Becoming: Hegel and the Measurement Problem"</strong>: A comparative study of Hegel's concept of sublation (Aufhebung) and quantum decoherence. Does Hegel's claim that becoming "settles" into Dasein offer a conceptual model for understanding how quantum indeterminacy resolves into classical determinacy without invoking an external observer?</li>
+</ol>
+
+---
+
+<em>Next: b. Quality — Reality and Negation (§21.99+)</em></p></div></div></details></article>
 </main>
 </div>
-
 <script>
 (function(){
-  var searchInput = document.getElementById('search');
-  var entries = document.querySelectorAll('.day-entry');
-  var noResults = document.getElementById('no-results');
-  var highlights = [];
-
+  var searchInput=document.getElementById("search");
+  var entries=document.querySelectorAll(".day-entry");
+  var noResults=document.getElementById("no-results");
+  var highlights=[];
   function clearHighlights(){
     highlights.forEach(function(h){
-      var parent = h.parentNode;
-      parent.replaceChild(document.createTextNode(h.textContent), h);
+      var p=h.parentNode;
+      p.replaceChild(document.createTextNode(h.textContent),h);
     });
-    highlights = [];
+    highlights=[];
   }
-
-  function highlightText(el, query){
-    if(!query || query.length < 2) return;
-    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
-    var nodes = [];
-    while(walker.nextNode()) nodes.push(walker.currentNode);
-    var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  function highlightText(el,query){
+    if(!query||query.length<2)return;
+    var walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
+    var nodes=[];
+    while(walker.nextNode())nodes.push(walker.currentNode);
+    var regex=new RegExp("("+query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi");
     nodes.forEach(function(node){
-      if(node.parentNode.tagName === 'SCRIPT' || node.parentNode.tagName === 'STYLE') return;
-      if(node.parentNode.classList.contains('search-highlight')) return;
-      var text = node.textContent;
-      if(!regex.test(text)) return;
-      regex.lastIndex = 0;
-      var frag = document.createDocumentFragment();
-      var lastIdx = 0;
-      var match;
-      while((match = regex.exec(text)) !== null){
-        if(match.index > lastIdx) frag.appendChild(document.createTextNode(text.slice(lastIdx, match.index)));
-        var mark = document.createElement('mark');
-        mark.className = 'search-highlight';
-        mark.textContent = match[0];
+      if(node.parentNode.tagName==="SCRIPT"||node.parentNode.tagName==="STYLE")return;
+      if(node.parentNode.classList.contains("search-highlight"))return;
+      var text=node.textContent;
+      if(!regex.test(text))return;
+      regex.lastIndex=0;
+      var frag=document.createDocumentFragment();
+      var lastIdx=0,match;
+      while((match=regex.exec(text))!==null){
+        if(match.index>lastIdx)frag.appendChild(document.createTextNode(text.slice(lastIdx,match.index)));
+        var mark=document.createElement("mark");
+        mark.className="search-highlight";
+        mark.textContent=match[0];
         frag.appendChild(mark);
         highlights.push(mark);
-        lastIdx = regex.lastIndex;
-        if(match[0].length === 0) regex.lastIndex++;
+        lastIdx=regex.lastIndex;
+        if(match[0].length===0)regex.lastIndex++;
       }
-      if(lastIdx < text.length) frag.appendChild(document.createTextNode(text.slice(lastIdx)));
-      node.parentNode.replaceChild(frag, node);
+      if(lastIdx<text.length)frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+      node.parentNode.replaceChild(frag,node);
     });
   }
-
-  searchInput.addEventListener('input', function(){
-    var query = this.value.trim().toLowerCase();
+  searchInput.addEventListener("input",function(){
+    var query=this.value.trim().toLowerCase();
     clearHighlights();
-    var visibleCount = 0;
-
+    var visibleCount=0;
     entries.forEach(function(entry){
-      if(!query || query.length < 2){
-        entry.classList.remove('hidden-by-search');
-        visibleCount++;
-        return;
-      }
-      // Search in all searchable content within this entry
-      var searchables = entry.querySelectorAll('[data-searchable], .collapsible-body .section-block, .tweet-card');
-      var found = false;
-      searchables.forEach(function(el){
-        if(el.textContent.toLowerCase().indexOf(query) !== -1) found = true;
-      });
-      // Also check the day header
-      var headerContent = (entry.getAttribute('data-search-content') || '').toLowerCase();
-      if(headerContent.indexOf(query) !== -1) found = true;
-
+      if(!query||query.length<2){entry.classList.remove("hidden-by-search");visibleCount++;return;}
+      var searchables=entry.querySelectorAll("[data-searchable],.collapsible-body .section-block,.tweet-card");
+      var found=false;
+      searchables.forEach(function(el){if(el.textContent.toLowerCase().indexOf(query)!==-1)found=true;});
+      var hc=(entry.getAttribute("data-search-content")||"").toLowerCase();
+      if(hc.indexOf(query)!==-1)found=true;
       if(found){
-        entry.classList.remove('hidden-by-search');
-        visibleCount++;
-        // Highlight
-        entry.querySelectorAll('[data-searchable], .collapsible-body .section-block, .tweet-card').forEach(function(el){
-          highlightText(el, query);
-        });
-        // Auto-expand collapsed sections that contain matches
-        entry.querySelectorAll('.collapsible-section').forEach(function(details){
-          if(details.textContent.toLowerCase().indexOf(query) !== -1){
-            details.setAttribute('open', '');
-          }
-        });
-      } else {
-        entry.classList.add('hidden-by-search');
-      }
+        entry.classList.remove("hidden-by-search");visibleCount++;
+        entry.querySelectorAll("[data-searchable],.collapsible-body .section-block,.tweet-card").forEach(function(el){highlightText(el,query);});
+        entry.querySelectorAll(".collapsible-section").forEach(function(details){if(details.textContent.toLowerCase().indexOf(query)!==-1)details.setAttribute("open","");});
+      }else{entry.classList.add("hidden-by-search");}
     });
-
-    noResults.style.display = (visibleCount === 0 && query.length >= 2) ? 'block' : 'none';
+    noResults.style.display=(visibleCount===0&&query.length>=2)?"block":"none";
   });
-
-  // Keyboard shortcut: Ctrl+K or / to focus search
-  document.addEventListener('keydown', function(e){
-    if((e.ctrlKey && e.key === 'k') || (e.key === '/' && !e.ctrlKey && !e.metaKey && document.activeElement === document.body)){
-      e.preventDefault();
-      searchInput.focus();
+  document.addEventListener("keydown",function(e){
+    if((e.ctrlKey&&e.key==="k")||(e.key==="/"&&!e.ctrlKey&&!e.metaKey&&document.activeElement===document.body)){
+      e.preventDefault();searchInput.focus();
     }
   });
 })();
