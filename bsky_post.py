@@ -1,4 +1,4 @@
-"""Post tweets to Bluesky via AT Protocol API — appends Hegel Reader URL."""
+"""Post tweets to Bluesky via AT Protocol API — with clickable URL facet."""
 import sys, json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,20 +22,38 @@ def post(session, text):
     import urllib.request
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     
-    # Try to append the URL if it fits (Bluesky limit = 300 chars)
-    url_space = 2  # newline + newline
+    # Build the full text with URL
+    url_space = 2
     if len(text) + len(PAGE_URL) + url_space <= 300:
         full_text = text + chr(10) + chr(10) + PAGE_URL
     elif len(text) + len(PAGE_URL) + 1 <= 300:
         full_text = text + " " + PAGE_URL
     else:
-        full_text = text  # No room for URL
+        full_text = text
+    
+    # Build facets for the URL so it renders as a clickable link
+    facets = []
+    url_pos = full_text.find(PAGE_URL)
+    if url_pos >= 0:
+        # The byte positions matter for AT Protocol facets
+        text_bytes = full_text.encode("utf-8")
+        url_bytes = PAGE_URL.encode("utf-8")
+        byte_start = text_bytes.find(url_bytes)
+        if byte_start >= 0:
+            byte_end = byte_start + len(url_bytes)
+            facets = [{
+                "index": {"byteStart": byte_start, "byteEnd": byte_end},
+                "features": [{"$type": "app.bsky.richtext.facet#link", "uri": PAGE_URL}]
+            }]
     
     record = {
         "$type": "app.bsky.feed.post",
         "text": full_text,
         "createdAt": now,
     }
+    if facets:
+        record["facets"] = facets
+    
     body = {
         "repo": session["did"],
         "collection": "app.bsky.feed.post",
@@ -70,4 +88,4 @@ if __name__ == "__main__":
     has_url = PAGE_URL in final_text
     print("OK " + uri)
     print("  [" + str(len(final_text)) + " chars] " + final_text[:150] + "...")
-    print("  URL appended: " + str(has_url))
+    print("  URL clickable: " + str(has_url))
