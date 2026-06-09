@@ -1,0 +1,6 @@
+LOCAL MODEL TEST — Day 4 (Something and Other)
+Model: Qwen 2.5 72B IQ3_XXS on RTX 5090
+Context: 24576 | Layers: 55/80 GPU
+Question: In Hegels Science of Logic, why does the distinction between something and other collapse? Answer in 2 sentences.
+---
+In Hegel's "Science of Logic," the distinction between something and other collapses because each is seen as inherently containing the negation of the other, leading to their mutual determination and interdependence. This dialectical process ultimately results in a higher synthesis that transcends the original opposition, illustrating the unity of opposites.
