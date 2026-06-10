@@ -673,11 +673,11 @@ This is one of the densest and most successful sections so far. The dialectic of
 
 ### 🐦 Tweet 1 — Wisdom Condensation
 
-Hegel on limits: the point isn't where the line stops. It's where the line starts. Everything you are is bounded — and every boundary is also a beginning. The finite thing doesn't just *have* a limit. It *is* its own self-transcendence. You're already beyond yourself.
+a boundary isn't where something stops. it's where it starts. hegel: the point doesn't end the line — it begins it. every limit is also an origin. the finite thing is driven beyond itself by its own nature. you're already past what you think you are.
 
 ### 🐦 Tweet 2 — Current Events Connection
 
-every tech CEO draws a "limit" around what their product is. "we're not a social network, we're a..." but Hegel knew: the boundary that defines you is also what drives you beyond yourself. the thing you're not is already inside the thing you are. limits aren't walls. they're engines.
+every startup says what it's not. not a social network. not a bank. hegel saw this: the boundary you draw is what drives you past yourself. what you exclude is already inside you. limits aren't walls — they're motors.
 
 ---
 
