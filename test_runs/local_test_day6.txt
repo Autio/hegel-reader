@@ -1,0 +1,8 @@
+LOCAL MODEL TEST — Day 6 (Finitude preview)
+Model: Qwen 2.5 72B IQ3_XXS on RTX 5090
+Config: 55/80 GPU layers, 24576 context
+Time: 42.8s | Tokens: 737 | Speed: 17.2 tok/s
+VRAM: 27.8 GB / 32 GB
+---
+
+Hegel argues that the finite is characterized by an inherent contradiction: while it exists as a determinate being, this very existence is also its limit, leading to its negation. The finite is not merely limited but is fundamentally oriented towards its own non-being, as its self-reference includes a negation that drives it beyond itself. This concept is pivotal for Hegel's dialectical system, as it illustrates the dynamic nature of reality where the finite is always in the process of becoming its opposite, thus transitioning into a higher form of existence. The notion of finitude, therefore, is not just a static property but a dynamic force that propels the dialectical progression of the concept.
