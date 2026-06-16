@@ -843,7 +843,7 @@ BEING → NOTHING → BECOMING → EXISTENCE → QUALITY → SOMETHING → OTHER
 
 ---
 
-## Day 16 — June 14, 2026
+## Day 8 — June 14, 2026
 ### Chapter 3: Being-for-itself — a. Being-for-itself as such
 **Pages 199-200 | Book One: The Doctrine of Being, Section I: Determinateness (Quality)**
 
@@ -913,7 +913,7 @@ The introduction of being-for-itself as a sublation of otherness and an infinite
 2. **Self-Consciousness in Advanced AI**: Develop models of AI that aim to achieve a form of self-consciousness.
 ---
 
-## Day 17 — June 16, 2026
+## Day 9 — June 16, 2026
 ### Chapter 3: Being-for-itself — a. Existence and Being-for-itself / b. Being-for-one
 **Pages 200–205 | Book One, Section I: Determinateness (Quality)**
 
