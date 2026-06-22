@@ -382,6 +382,7 @@ page_html = f'''<!DOCTYPE html>
 <style>{full_css}</style>
 </head>
 <body>
+<button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
 <div class="page">
 <nav class="sidebar">
 <div class="sidebar-header"><h1>Hegel Reader</h1><div class="subtitle">The Science of Logic</div></div>
@@ -460,32 +461,40 @@ function highlightTextNodes(el, words) {{
       if (re.test(text)) {{
         text = text.replace(re, '<mark class="search-highlight">$1</mark>');
         changed = true;
+      if (q.length >= 2) {{
+        entries.forEach(entry => {{
+          if (entry.classList.contains('hidden-by-search')) return;
+          const blocks = entry.querySelectorAll('[data-searchable]');
+          blocks.forEach(block => {{
+            highlightTextNodes(block, words);
+          }});
+        }});
       }}
-    }});
-    if (changed) {{
-      const span = document.createElement('span');
-      span.innerHTML = text;
-      node.parentNode.replaceChild(span, node);
-    }}
-  }});
-}}
+      }};
 
-searchInput.addEventListener('input', doSearch);
-document.addEventListener('keydown', e => {{
-  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {{
-    e.preventDefault();
-    searchInput.focus();
-    searchInput.select();
-  }}
-  if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {{
-    e.preventDefault();
-    searchInput.focus();
-    searchInput.select();
-  }}
-}});
-</script>
-</body>
-</html>'''
+      document.addEventListener('keydown', e => {{
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {{
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      }}
+      if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {{
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      }}
+      }});
+      </script>
+      <script>
+      const btn=document.getElementById('menu-toggle');
+      const sidebar=document.querySelector('.sidebar');
+      if(btn && sidebar){{
+      btn.addEventListener('click',()=>sidebar.classList.toggle('open'));
+      document.querySelectorAll('.sidebar-nav a').forEach(a=>a.addEventListener('click',()=>sidebar.classList.remove('open')));
+      }}
+      </script>
+      </body>
+      </html>'''
 
 # Write output
 output_path = base.joinpath("index.html")
