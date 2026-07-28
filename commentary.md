@@ -8,6 +8,17 @@
 **Model:** OpenRouter (paid, testing phase)
 
 ---
+## Day 42 - July 17, 2026
+
+### § Reading
+
+**Unit 42** (Book One: The Doctrine of Being / Section III: Measure / Chapter 1: Specific Quantity / Section a: The Rule)
+
+Blah blah blah...
+
+---
+
+
 
 ## System Map
 
@@ -2566,7 +2577,7 @@ this is why platforms scale by copying themselves: every facebook user is "the o
 
 ### 🔬 Research Project Ideas
 
-1. **Hegel's repulsion vs. modern set theory** — In set theory, {∅} is "the one." But then {{∅}, {∅, {∅}}} is "the many ones." Is this the same as Hegel's repulsion? Trace the formal structure.
+1. **Hegel's repulsion vs. modern set theory** — In set theory, {∅} is "the one." But then {% raw %}{{∅}, {∅, {∅}}}{% endraw %} is "the many ones." Is this the same as Hegel's repulsion? Trace the formal structure.
 
 2. **Repulsion in complexity theory** — Complex systems often exhibit "symmetry breaking" where a unified state becomes multiple. Does Hegel's "repulsion" anticipate any of these mathematical structures? Compare with work on self-reproducing systems.
 
@@ -4393,3 +4404,17 @@ Unit 42 (the next unit) will unfold the three moments of specifying measure in d
 - How the unity of the two produces the *self-specifying* of measure (this is the transition to the next section)
 
 The short unit today is the calm before the storm — the next units are substantial.
+
+---
+
+---
+
+## Day 42 - July 17, 2026
+
+### § Reading
+
+**Unit 42 reading and commentary to be added by AI**
+
+Testing formatting fix.
+
+---
