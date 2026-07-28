@@ -4805,11 +4805,12 @@ Hegel's "double immediacy" problem—that qualities can be abstracted from their
 ---
 
 ## Day 46 — July 29, 2026
+### Chapter 2: Real Measure — The Relation of Independent Measures
+**Pages 376 | Book One: The Doctrine of Being, Section III: Measure, Chapter 2: Real Measure, Subsection a: The Relation of Independent Measures**
+
+---
 
 ### § Reading
-
-**Unit 46** (Book One: The Doctrine of Being / Section III: Measure / Chapter 2: Real Measure / Subsection a: The Relation of Independent Measures)
-Pages 376 | Science of Logic (Di Giovanni translation)
 
 Hegel now turns to measures that are no longer immediate, but self-subsistent: they have internal specifications, making them independent "things" that are physical and material. The relation of these independent measures is initially immediate, with the two sides having subsistence in external things, combined externally. But these self-subsistent materialities are what they are only via their quantitative determination as measures, and they are posited as non-indifferent to others (elective affinity), members of a series of quantitative relations. This indifferent multifarious relating concludes by cutting itself off as an exclusive being-for-itself: elective affinity.
 
@@ -4900,7 +4901,6 @@ Hegel's move from external combination to internal quantitative determination ca
 ---
 
 ## Day 47 — July 30, 2026
-
 ### Chapter 2: Specifying Measure — Combination of two measures
 **Pages 393–398 | Book One, Section III: Measure, Chapter 2: Specifying Measure**
 ---
