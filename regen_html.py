@@ -187,7 +187,7 @@ for day_text in day_splits:
     if not day_text.strip():
         continue
     
-    header_match = re.match(r'## (Day \d+ — .*?)\r?\n(?:\r?\n)?(### .*?)\r?\n\*\*(.*?)\*\*\r?\n\r?\n---\r?\n', day_text)
+    header_match = re.match(r'## (Day \d+ — .*?)\r?\n(?:\r?\n)?(### .*?)(?:\r?\n\*\*(.*?)\*\*\r?\n)?(?:\r?\n)?(?:---\r?\n)?', day_text)
     if not header_match:
         chunk = day_text[:80].replace('\n', '\\n')
         print(f"WARNING: Could not parse day header from: {chunk}...")
@@ -195,7 +195,11 @@ for day_text in day_splits:
     
     day_label = header_match.group(1).strip()
     chapter_line = header_match.group(2).strip()
-    pages_line = header_match.group(3).strip()
+    pages_line = header_match.group(3)
+    if pages_line:
+        pages_line = pages_line.strip()
+    else:
+        pages_line = ""
     
     day_body = day_text[header_match.end():]
     
