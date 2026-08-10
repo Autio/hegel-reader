@@ -187,7 +187,7 @@ for day_text in day_splits:
     if not day_text.strip():
         continue
     
-    header_match = re.match(r'## (Day \d+ — .*?)\r?\n(?:\r?\n)?(### .*?)(?:\r?\n\*\*(.*?)\*\*\r?\n)?(?:\r?\n)?(?:---\r?\n)?', day_text)
+    header_match = re.match(r'## (Day \d+ — .*?)\r?\n(?:\r?\n)?(### .*?)\r?\n(?:\*\*(.*?)\*\*\r?\n)?(?:---\r?\n)?', day_text)
     if not header_match:
         chunk = day_text[:80].replace('\n', '\\n')
         print(f"WARNING: Could not parse day header from: {chunk}...")
