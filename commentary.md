@@ -7166,7 +7166,7 @@ this is why "authenticity" discourse fails — people think inner self ≠ outer
 
 ---
 
-## Day 85 — August 28, 2026
+## Day 85 — August 27, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — a. The exposition of the absolute
 **Book Three: The Doctrine of the Concept — §§1286-1290 (approx.)**
@@ -7197,7 +7197,7 @@ this is why "radical transparency" works for orgs — the absolute (the org's pu
 
 ---
 
-## Day 86 — August 29, 2026
+## Day 86 — August 28, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — b. The absolute attribute
 **Book Three: The Doctrine of the Concept — §§1291-1293 (approx.)**
@@ -7228,7 +7228,7 @@ this is why "company values" on a wall are useless — values aren't attributes 
 
 ---
 
-## Day 87 — August 30, 2026
+## Day 87 — August 29, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. The mode of the absolute
 **Book Three: The Doctrine of the Concept — §§1294-1305 (approx.)**
@@ -7292,7 +7292,7 @@ this is "strategy" (universal) and "execution" (particular) — but they're not 
 
 ---
 
-## Day 88 — August 31, 2026
+## Day 88 — August 30, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — a. Contingency / Formal actuality, possibility, and necessity
 **Book Three: The Doctrine of the Concept — §§1306-1310 (approx.)**
@@ -7328,7 +7328,7 @@ this is "it is what it is" energy — resignation to contingency. hegel says: co
 
 ---
 
-## Day 89 — September 01, 2026
+## Day 89 — August 31, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — b. Relative necessity / Real actuality, possibility, and necessity
 **Book Three: The Doctrine of the Concept — §§1311-1315 (approx.)**
@@ -7359,7 +7359,7 @@ this is why "we need to do something" (formal) ≠ "we need to do THIS specific 
 
 ---
 
-## Day 90 — September 02, 2026
+## Day 90 — September 01, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. Absolute necessity
 **Book Three: The Doctrine of the Concept — §§1316-1320 (approx.)**
@@ -7412,7 +7412,7 @@ this is why "i had no choice" is always a lie at the concept level. the concept'
 
 ---
 
-## Day 91 — September 03, 2026
+## Day 91 — September 02, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. The relation of substantiality
 **Book Three: The Doctrine of the Concept — §§1321-1325 (approx.)**
@@ -7479,7 +7479,7 @@ this is why "systems" aren't just collections of parts — a system IS a substan
 
 ---
 
-## Day 92 — September 04, 2026
+## Day 92 — September 03, 2026
 
 ### Chapter 3: The Relation of Substance — b. the relation of causality
 **Pages 565–565 | Book Two, Section III: Substance, Chapter 3: The Relation of Substance**
@@ -7574,7 +7574,7 @@ AI agents now "cause" effects across codebases, markets, discourse — but the e
 
 ---
 
-## Day 93 — September 05, 2026
+## Day 93 — September 04, 2026
 
 ### Chapter 3: Causality — a. Formal causality
 **Pages 566–567 | Book Two, Section III: Causality, Chapter 3: Causality**
@@ -7658,7 +7658,7 @@ everyone arguing about whether AI "causes" job losses or "merely correlates." he
 
 3. **Causal language models**: Current LLMs mimic formal causality (next-token prediction as "cause" of output). Explore architectures where the "cause" (prompt/context) and "effect" (completion) are recognized as reciprocal moments of a single actuosity, with the model weights as the *conditions* that mediate. This reframes alignment: not "control the cause" but "structure the conditions of reciprocity."---
 
-## Day 94 — September 06, 2026
+## Day 94 — September 05, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. The Syllogism — b. The relation of causality
 **Book Three: The Doctrine of the Concept — §§1326-1327 (approx.)**
@@ -7732,7 +7732,7 @@ root cause analysis in complex systems is weird — the system IS the cause of i
 
 ---
 
-## Day 95 — September 07, 2026
+## Day 95 — September 06, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. The Syllogism — b. Formal causality
 **Book Three: The Doctrine of the Concept — §§1328-1330 (approx.)**
@@ -7783,7 +7783,7 @@ this is correlation ≠ causation — formal causality is when A precedes B but 
 
 ---
 
-## Day 96 — September 08, 2026
+## Day 96 — September 07, 2026
 
 ### Chapter 3: The Concept — Section I: Subjectivity — c. The Syllogism — b. Determinate causality
 **Book Three: The Doctrine of the Concept — §§1331-1335 (approx.)**
@@ -7861,7 +7861,7 @@ output = input realized in systems. function output should EXPRESS function logi
 
 ---
 
-## Day 97 — September 09, 2026
+## Day 97 — September 08, 2026
 
 ### Chapter 1: The Universal Concept
 **Pages 603–607 | Book Three, Section I: Subjectivity, Chapter 1: The Concept**
@@ -7938,7 +7938,7 @@ watching AI models "reason" by generating tokens that fold back on themselves �
 
 ---
 
-## Day 98 — September 10, 2026
+## Day 98 — September 09, 2026
 
 ### Chapter 1: The Concept — b. the particular concept
 **Pages 607–610 | Book Two, Section I: The Concept, Chapter 1: The Concept**
@@ -8055,7 +8055,7 @@ Survey contemporary metaphysics of science (Ladyman & Ross, French, etc.) on "st
 
 ---
 
-## Day 99 — September 11, 2026
+## Day 99 — September 10, 2026
 
 ### Chapter 1: The Concept — c. the singular
 **Pages 619–630 | Book Three, Section I: Subjectivity, Chapter 1: The Concept**
@@ -8141,7 +8141,7 @@ every time a diffusion model goes from noise to a coherent image, it's the unive
 
 ---
 
-## Day 100 — September 12, 2026
+## Day 100 — September 11, 2026
 
 ### Chapter 2: The Judgment — a. the judgment of existence
 **Pages 630–630 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8221,7 +8221,7 @@ fact-checking culture treats every claim as a judgment of existence: "X said Y o
 
 ---
 
-## Day 101 — September 13, 2026
+## Day 101 — September 12, 2026
 
 ### Chapter 2: The Judgment — a. The positive judgment
 **Pages 630–635 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8304,7 +8304,7 @@ taxonomy wars: "is a hot dog a sandwich?" positive judgment thinking. people wan
 
 ---
 
-## Day 102 — September 14, 2026
+## Day 102 — September 13, 2026
 
 ### Chapter 2: The Judgment — b. The negative judgment
 **Pages 635–640 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8382,7 +8382,7 @@ culture war: "X is not Y" — trans women are not women, this art is not art, th
 
 ---
 
-## Day 103 — September 15, 2026
+## Day 103 — September 14, 2026
 
 ### Chapter 2: The Judgment — c. The infinite judgment
 **Pages 640–641 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8459,7 +8459,7 @@ The danger: collapsing into the "Positive Infinite" (the particular *is* the uni
 
 ---
 
-## Day 104 — September 16, 2026
+## Day 104 — September 15, 2026
 
 ### Chapter 2: The Judgment — b. the judgment of reflection
 **Pages 641–643 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8542,7 +8542,7 @@ platform moderation: "the platform *is* its policies" — judgment of reflection
 
 ---
 
-## Day 105 — September 17, 2026
+## Day 105 — September 16, 2026
 
 ### Chapter 2: The Judgment — a. The singular judgment
 **Pages 643–643 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
@@ -8626,7 +8626,7 @@ The one-sidedness: The Singular Judgment still treats the singular as *one* indi
 
 ---
 
-## Day 106 — September 18, 2026
+## Day 106 — September 17, 2026
 
 ### Chapter 2: The Judgment — b. The particular judgment
 **Pages 643–645 | Book Three, Section I: Subjectivity, Chapter 2: The Judgment**
