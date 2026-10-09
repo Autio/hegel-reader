@@ -1,5 +1,5 @@
 {
-  "current_unit": 115,
+  "current_unit": 116,
   "total_units": 149,
   "units_completed": [
     1,
@@ -115,10 +115,11 @@
     111,
     112,
     113,
-    114
+    114,
+    115
   ],
-  "last_run": "2026-09-25T09:07:42.046654",
-  "last_tweeted_day": 114,
+  "last_run": "2026-10-10T00:08:06.463033",
+  "last_tweeted_day": 115,
   "commentary_file": "C:\\Users\\pauti\\Documents\\Hegel Reader\\commentary.md",
   "units_file": "C:\\Users\\pauti\\Documents\\Hegel Reader\\reading_units.json"
 }
