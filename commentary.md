@@ -10704,7 +10704,7 @@ AI model routing does exactly this. one request hits the router (universal A), g
 
 ## Day 129 — October 10, 2026
 
-### Chapter 4: The Concept — Section II: Objectivity — a. Mechanism — a. The Mechanical Object
+### Chapter 3: The Concept — Section II: Objectivity — a. Mechanism — a. The Mechanical Object
 **Pages 704–707 | Book Three: The Doctrine of the Concept — Section II: Objectivity, Chapter 4: Mechanism — a. The Mechanical Object**
 
 ---
@@ -10836,7 +10836,7 @@ microservices are mechanical objects. each service: self-contained, no shared st
 
 ## Day 130 — October 11, 2026
 
-### Chapter 4: The Concept — Section II: Objectivity — a. Mechanism — b. The Mechanical Process
+### Chapter 3: The Concept — Section II: Objectivity — a. Mechanism — b. The Mechanical Process
 **Pages 707–711 | Book Three: The Doctrine of the Concept — Section II: Objectivity, Chapter 4: Mechanism — b. The Mechanical Process**
 
 ---
@@ -10982,8 +10982,8 @@ distributed systems are mechanical processes. each node: "i'm a complete service
 
 ## Day 131 — October 12, 2026
 
-### Chapter 1: Mechanism — a. The formal mechanical process
-**Pages ???–??? | Book Two: The Doctrine of Essence, Chapter 1: Mechanism**
+### Chapter 3: The Concept — Section II: Objectivity — a. Mechanism — a. The formal mechanical process
+**Pages 710–713 | Book Three: The Doctrine of the Concept — Section II: Objectivity, Chapter 5: Mechanism — a. The formal mechanical process**
 
 ---
 
@@ -11058,8 +11058,8 @@ ai alignment folks debate "mechanistic interpretability" — can we understand n
 
 ## Day 132 — October 13, 2026
 
-### Chapter 2: The Real Mechanical Process
-**Pages 398–405 | Book Two: The Doctrine of Essence, Section II: Appearance, Chapter 1: Condition**
+### Chapter 3: The Concept — Section II: Objectivity — a. Mechanism — b. The real mechanical process
+**Pages 714–718 | Book Three: The Doctrine of the Concept — Section II: Objectivity, Chapter 5: Mechanism — b. The real mechanical process**
 
 ---
 
@@ -11145,8 +11145,8 @@ spacex catches a booster with chopsticks. the rocket *knows* its own weight, its
 
 ## Day 133 — October 14, 2026
 
-### Chapter 2: Essence — Section II: The Appearance — Chapter 1: The Mechanical Process — c. The Product of the Mechanical Process
-**Pages 713–714 | Book Two, Section II: The Appearance, Chapter 1: The Mechanical Process**
+### Chapter 3: The Concept — Section II: Objectivity — a. Mechanism — c. The product of the mechanical process
+**Pages 719–720 | Book Three: The Doctrine of the Concept — Section II: Objectivity, Chapter 5: Mechanism — c. The product of the mechanical process**
 
 ---
 
