@@ -1,5 +1,5 @@
 {
-  "current_unit": 134,
+  "current_unit": 150,
   "total_units": 149,
   "units_completed": [
     1,
@@ -134,10 +134,28 @@
     130,
     131,
     132,
-    133
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149
   ],
-  "last_run": "2026-10-14T09:04:42.397855",
+  "last_run": "2026-11-07T21:35:47.655005+02:00",
   "last_tweeted_day": 133,
   "commentary_file": "C:\\Users\\pauti\\Documents\\Hegel Reader\\commentary.md",
-  "units_file": "C:\\Users\\pauti\\Documents\\Hegel Reader\\reading_units.json"
+  "units_file": "C:\\Users\\pauti\\Documents\\Hegel Reader\\reading_units.json",
+  "completed_at": "2026-11-07T21:35:47.655005+02:00",
+  "completion_note": "All 149 source units completed during catch-up on November 7, 2026."
 }

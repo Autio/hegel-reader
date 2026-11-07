@@ -227,8 +227,8 @@ for day_text in day_splits:
         sections['coherence'] = ""
     
     # Tweets
-    tweet1_match = re.search(r'### (?:🐦 )?Tweet 1[—–\-].*?\n\n(?:> )?(.*?)(?=\n\n### (?:🐦 )?Tweet 2|\Z)', day_body, re.DOTALL)
-    tweet2_match = re.search(r'### (?:🐦 )?Tweet 2[—–\-].*?\n\n(?:> )?(.*?)(?=\n\n### (?:🔄|🔬)|\n\n---|\Z)', day_body, re.DOTALL)
+    tweet1_match = re.search(r'### (?:🐦 )?Tweet ?1\s*[—–\-].*?\n\n(?:> )?(.*?)(?=\n\n### (?:🐦 )?Tweet 2|\Z)', day_body, re.DOTALL)
+    tweet2_match = re.search(r'### (?:🐦 )?Tweet ?2\s*[—–\-].*?\n\n(?:> )?(.*?)(?=\n\n### (?:🔄|🔬)|\n\n---|\Z)', day_body, re.DOTALL)
     
     tweets = []
     if tweet1_match:
@@ -453,42 +453,54 @@ function doSearch() {{
 }}
 
 function highlightTextNodes(el, words) {{
-  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach(node => {{
-    let text = node.textContent;
+    const text = node.textContent;
+    const lower = text.toLowerCase();
+    const fragment = document.createDocumentFragment();
+    let cursor = 0;
     let changed = false;
-    words.forEach(word => {{
-      const escaped = word.replace(/[.*+?^${{}}()|[\\]\\\\]/g, '\\\\$&');
-      const re = new RegExp('(' + escaped + ')', 'gi');
-      if (re.test(text)) {{
-        text = text.replace(re, '<mark class="search-highlight">$1</mark>');
-        changed = true;
-      if (q.length >= 2) {{
-        entries.forEach(entry => {{
-          if (entry.classList.contains('hidden-by-search')) return;
-          const blocks = entry.querySelectorAll('[data-searchable]');
-          blocks.forEach(block => {{
-            highlightTextNodes(block, words);
-          }});
-        }});
-      }}
-      }};
-
-      document.addEventListener('keydown', e => {{
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {{
-        e.preventDefault();
-        searchInput.focus();
-        searchInput.select();
-      }}
-      if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {{
-        e.preventDefault();
-        searchInput.focus();
-        searchInput.select();
-      }}
+    while (cursor < text.length) {{
+      let next = -1;
+      let match = '';
+      words.forEach(word => {{
+        const index = lower.indexOf(word, cursor);
+        if (index !== -1 && (next === -1 || index < next)) {{
+          next = index;
+          match = word;
+        }}
       }});
-      </script>
+      if (next === -1) break;
+      fragment.appendChild(document.createTextNode(text.slice(cursor, next)));
+      const mark = document.createElement('mark');
+      mark.className = 'search-highlight';
+      mark.textContent = text.slice(next, next + match.length);
+      fragment.appendChild(mark);
+      cursor = next + match.length;
+      changed = true;
+    }}
+    if (changed) {{
+      fragment.appendChild(document.createTextNode(text.slice(cursor)));
+      node.parentNode.replaceChild(fragment, node);
+    }}
+  }});
+}}
+searchInput.addEventListener('input', doSearch);
+document.addEventListener('keydown', e => {{
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {{
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+  }}
+  if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {{
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+  }}
+}});
+</script>
       <script>
       const btn=document.getElementById('menu-toggle');
       const sidebar=document.querySelector('.sidebar');
@@ -502,6 +514,7 @@ function highlightTextNodes(el, words) {{
 
 # Write output
 output_path = base.joinpath("index.html")
+page_html = '\n'.join(line.rstrip() for line in page_html.splitlines()) + '\n'
 output_path.write_text(page_html, encoding="utf-8")
 file_size = output_path.stat().st_size
 print(f"SUCCESS: Wrote index.html ({file_size} bytes, {len(days)} days)")
